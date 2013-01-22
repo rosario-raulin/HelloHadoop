@@ -18,9 +18,8 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 
 public final class ZipCounter {
-	
+
 	private final static String TABLENAME = "serviceparrot";
-	
 
 	private static class ZipCounterMapper extends
 			TableMapper<Text, IntWritable> {
@@ -70,7 +69,7 @@ public final class ZipCounter {
 				TableMapReduceUtil.initTableMapperJob(TABLENAME, new Scan(),
 						ZipCounter.ZipCounterMapper.class, Text.class,
 						IntWritable.class, job);
-		
+
 				job.waitForCompletion(true);
 			} catch (final IOException e) {
 				e.printStackTrace();

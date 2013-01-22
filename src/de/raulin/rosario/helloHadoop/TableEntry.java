@@ -22,8 +22,8 @@ public final class TableEntry {
 		this.values = new HashMap<String, String>(values.length);
 		this.values.put("rowkey", values[0] + values[1]);
 
-		for (int i = 2; i < values.length; ++i) { 
-			this.values.put(CSV_KEYS[i-2], values[i]);
+		for (int i = 2; i < values.length; ++i) {
+			this.values.put(CSV_KEYS[i - 2], values[i]);
 		}
 	}
 

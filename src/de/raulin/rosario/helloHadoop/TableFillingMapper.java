@@ -33,7 +33,7 @@ public final class TableFillingMapper extends
 			throws IOException, InterruptedException {
 		final String next = value.toString();
 		final String[] values = PARSER.parseLine(next);
-		
+
 		final TableEntry entry = new TableEntry(values);
 		entry.putToTable(table);
 	}
@@ -69,7 +69,8 @@ public final class TableFillingMapper extends
 				e.printStackTrace();
 			}
 		} else {
-			System.err.println("usage: java TableFillingMapper input-path output-path");
+			System.err
+					.println("usage: java TableFillingMapper input-path output-path");
 		}
 	}
 }
