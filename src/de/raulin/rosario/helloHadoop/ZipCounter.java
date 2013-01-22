@@ -70,7 +70,7 @@ public final class ZipCounter {
 				TableMapReduceUtil.initTableMapperJob(TABLENAME, new Scan(),
 						ZipCounter.ZipCounterMapper.class, Text.class,
 						IntWritable.class, job);
-
+		
 				job.waitForCompletion(true);
 			} catch (final IOException e) {
 				e.printStackTrace();
