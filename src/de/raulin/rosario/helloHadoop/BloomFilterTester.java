@@ -9,6 +9,8 @@ import org.apache.hadoop.fs.Path;
 
 public final class BloomFilterTester {
 
+	private static final String USAGE_MESSAGE = "usage: java BloomFilterTester filter-inpath first-test-key [other-test-keys]";
+		
 	public static void main(String[] args) throws FileNotFoundException,
 			IOException {
 		if (args.length >= 2) {
@@ -26,9 +28,7 @@ public final class BloomFilterTester {
 				}
 			}
 		} else {
-			System.err
-					.println("usage: java BloomFilterTester filter-inpath first-test-key [other-test-keys]");
+			System.err.println(USAGE_MESSAGE);
 		}
 	}
-
 }
